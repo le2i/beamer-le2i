@@ -23,7 +23,11 @@
 \usetikzlibrary{snakes,decorations.text,shapes,patterns}
 
 \boldmath
-\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+\usepackage[orientation=landscape,size=a0,scale=1.4,debug]{beamerposter}
+% change list indention level
+% \setdefaultleftmargin{3em}{}{}{}{}{}
+
+
 \usepackage{array,booktabs,tabularx}
 \newcolumntype{Z}{>{\centering\arraybackslash}X} % centered tabularx columns
 \newcommand{\pphantom}{\textcolor{ta3aluminium}} % phantom introduces a vertical space in p formatted table columns??!!
@@ -45,7 +49,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newlength{\columnheight}
-\setlength{\columnheight}{105cm}
+\setlength{\columnheight}{91cm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,7 +62,7 @@
     %----------------------------------------------------------%
     %             		FIRST COLUMN 						  %
 	%----------------------------------------------------------%
-    \begin{column}{.49\textwidth}
+    \begin{column}{.33\textwidth}
       \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
         \begin{minipage}[T]{.95\textwidth}  % tweaks the width, makes a new \textwidth
           \parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
@@ -69,7 +73,6 @@
             \begin{block}{Abstract}
               \lipsum[1-2]
             \end{block}
-            \vfill
             \begin{block}{Introduction}
               \begin{itemize}
                \item \textbf{\color{orounam}First point }
@@ -77,10 +80,8 @@
                		\item Description 
                		\item More description
                \end{itemize}  
-              \end{itemize}
-              \lipsum[1]
+              \end{itemize}                 
             \end{block}
-            \vfill
             \begin{block}{Second block}
             \begin{itemize}
             	\item \textbf{\color{orounam}Random forest (RF) ensemble}
@@ -97,7 +98,6 @@
             		\end{column}
             \end{columns}
             \end{itemize}
-            \lipsum[1-2]
             \end{block}          
             \vfill
          
@@ -105,10 +105,36 @@
         \end{minipage}
       \end{beamercolorbox}
     \end{column}
+    %----------------------------------------------------------------%
+    %                      SECOND COLUMN                             % 
+    %----------------------------------------------------------------%
+    \begin{column}{.33\textwidth}
+      \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+        \begin{minipage}[T]{.95\textwidth}  % tweaks the width, makes a new \textwidth
+          \parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
+            % Since all columns are the same length, it is all nice and tidy.  You have to get the height empirically
+            % ---------------------------------------------------------%
+
+            % fill each column with content            
+            \begin{block}{Franework}
+              \lipsum[1-2]
+                 \begin{equation}
+                   {n! \over k!(n-k)!} = {n \choose k}
+                 \end{equation}
+                 \lipsum[1]\cite{barata2014color, barata2013towards, barata2013role, barata2013two, barata2014bag}
+            \end{block}
+            \vfill
+  
+
+         
+           }
+        \end{minipage}
+      \end{beamercolorbox}
+    \end{column}
     %----------------------------------------------------------%
-    %             		SECOND COLUMN 						  %
+    %             		Third COLUMN 						  %
 	%----------------------------------------------------------%
-	\begin{column}{.49\textwidth}
+	\begin{column}{.33\textwidth}
 	\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
         \begin{minipage}[T]{.95\textwidth}  % tweaks the width, makes a new \textwidth
           \parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
@@ -120,18 +146,12 @@
             		 \item Description 
             		\end{itemize}
             	 \end{itemize}
-                 \lipsum[1]
-                 \begin{equation}
-                   {n! \over k!(n-k)!} = {n \choose k}
-                 \end{equation}
-                 \lipsum[1]\cite{barata2014color, barata2013towards, barata2013role, barata2013two, barata2014bag}
+                 \lipsum[1-2]
             \end{block}
-            \vfill
             \begin{block}{References}
               \bibliography{refs2}
-              \bibliographystyle{apalike}
+ 			  \bibliographystyle{apalike}
             \end{block}
-            \vfill
             }
         \end{minipage}
     \end{beamercolorbox}    
@@ -144,7 +164,6 @@
   %\tiny\hfill\textcolor{ta2gray}{Created with \LaTeX \texttt{beamerposter}  \url{http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php}}
   \tiny\hfill{Created with \LaTeX \texttt{beamerposter}  \url{http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php} \hskip1em}
 \end{frame}
-
 \end{document}
 
 
